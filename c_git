@@ -1,0 +1,59 @@
+Comandos git básicos:
+
+
+SUBIR PRO GITHUB
+git init 
+git status 
+git add .
+git status 
+git commit -m “commit”
+git remote add origin <link>
+git push origin master 
+
+ATUALIZAR REPOSITÓRIO 
+git init 
+git status
+git add . 
+git status
+git commit -m “atualização”
+git pull origin master
+git push origin master 
+
+FORÇAR PUSH:
+git push origin master - - force
+
+CLONAR REPOSITÓRIO:
+git clone url
+
+MOSTRAR VERSÃO DO PROJETO:
+git tag
+
+ALTERA VERSÃO ATUAL POR OUTRA PASSADA:
+git checkout versão
+
+VER DIFERENÇA ENTRE DUAS VERSÕES:
+git diff v0.1 v0.2 
+
+VER ARQUIVOS CONTROLADOS:
+git ls-files
+
+ADD INTERATIVO:
+git add -i 
+
+INCLUI NO COMMIT TODOS OS ARQUIVOS REMOVIDOS OU MODIFICADOS:
+git commit -a -m “mensagem”
+
+VER HISTÓRICO DE COMMITS:
+git log
+
+VER QUAIS ARQUIVOS FORAM ALTERADOS:
+git whatchanged 
+git whatchanged -p
+
+MOSTRAR REPOSITÓRIOS LOCAIS:
+git remote
+git remote -v
+
+DAR PUSH SEM ORIGIN E MASTER:
+git push -u
+
