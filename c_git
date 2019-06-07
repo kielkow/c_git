@@ -1,4 +1,4 @@
-Comandos git básicos:
+Comandos git básicos
 
 
 SUBIR PRO GITHUB
@@ -57,3 +57,42 @@ git remote -v
 DAR PUSH SEM ORIGIN E MASTER:
 git push -u
 
+VER AS BRANCHS:
+git branch
+
+CRIAR BRANCH:
+git branch nomedabranch 
+
+MUDAR DE BRANCH:
+git checkout nomedabranch
+
+JUNTAR BRANCH LOCAL COM REMOTA:
+git push -u origin nomedabranch 
+
+VER BRANCHS REMOTAS:
+git branch -r
+
+CRIAR BRANCH REMOTA BASEADA NA LOCAL:
+git branch -t nomedabranch origin/nomedabranch 
+
+CRIAR BRANCH E MUDAR PARA ELA:
+git checkout -b nomedabranch 
+
+VER BRANCHS REMOTAS E LOCAIS:
+git branch -a
+
+REMOVER UMA BRANCH:
+git branch -D
+
+REMOVER BRANCH SINCRONIZADA:
+git branch -d
+
+CRIAÇÃO DE BRANCH/LINK E MUDANÇA PARA NOVA BRANCH:
+git checkout -t
+
+REMOVER BRANCH REMOTA:
+git push -d origin nomedabranch 
+git push origin :nomedabranch 
+
+VERIFICAR ATUALIZAÇÕES NO REPO DE ATALHO:
+git fetch origin
