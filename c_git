@@ -96,3 +96,12 @@ git push origin :nomedabranch
 
 VERIFICAR ATUALIZAÇÕES NO REPO DE ATALHO:
 git fetch origin
+
+MOSTRAR LISTA DE PROGRAMAS PARA MERGE:
+git mergetool --tool-help
+
+UTILIZAR PROGRAMA PARA MERGE:
+git mergetool -t nome_do_programa
+
+AJUDA COM A FERRAMENTA DE MERGE:
+git mergetool --help
