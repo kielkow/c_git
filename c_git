@@ -123,3 +123,70 @@ git rebase - -skip
 
 BRANCH PARA TRATAR CONFLITOS:
 (no branch)
+
+VOLTAR PARA VERSÃO PASSADA DE UM ARQUIVO:
+git checkout nomedoarquivo
+
+*Só funciona sem salvar
+
+VOLTAR PARA ÚLTIMO COMMIT DE UM ARQUIVO:
+git reset HEAD nomedoarquivo
+
+DESFAZER ÚLTIMO COMMIT:
+git reset iddocommit
+
+DESFAZER COMMIT ANTIGO:
+git revert iddocommit 
+
+GUARDAR ALTERAÇÕES ANTES DE COMMITAR:
+git stash
+
+VER ALTERAÇÕES SALVAS NO STASH:
+git stash list
+
+VOLTAR PARA ÚLTIMO STASH:
+git stash pop
+
+VOLTAR PARA ÚLTIMO STASH SEM REMOVÊ-LO :
+git stash apply
+
+VOLTAR PARA STASH ESPECÍFICO:
+git stash apply numerostash
+
+APAGAR STASH:
+git stash drop
+
+APAGAR TODOS OS ESTADOS DE STASH:
+git stash clear
+
+
+PROCURAR POR COMMITS ESPECÍFICOS:
+
+•	ATIVAR GIT BISECT:
+git bisect start
+
+•	COMMIT RUIM:
+git bisect bad hashcommit
+
+•	COMMIT BOM:
+git bisect good hashcommit
+
+
+RESTAURAR ARQUIVO AO ESTADO ORIGINAL COM NOME IGUAL AO DA BRANCH:
+git checkout - - nomedoarquivo 
+
+REMOVER ALTERAÇÕES DO HISTÓRICO LOCAL DE COMMITS, DO INDEX E DO WORKING DIRECTORY PERMANENTEMENTE: 
+git reset - -hard
+
+REMOVER ALTERAÇÕES DO HISTÓRICO LOCAL DE COMMITS: 
+git reset - -soft
+
+REMOVER ALTERAÇÕES DO HISTÓRICO LOCAL DE COMMITS E DO INDEX:
+git reset
+
+REFERENCIAR COMMIT ANTIGO:
+git reset HEAD~numerodevoltas
+
+DESCARTAR ALTERAÇÕES PERMANENTEMENTE DE COMMIT ANTERIOR:
+git reset - -hard HEAD~numerodevoltas
+
