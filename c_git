@@ -128,7 +128,7 @@ TRAZER COMMITS DE UMA BRANCH PARA OUTRA:
 git merge branchcomcommits
 
 ATUALIZAR UMA BRANCH COM BASE EM OUTRA:
-git rebase nomedabranchbase branchprecisaatualizar
+git rebase branchatual branchbase
 
 CONTINUAR REBASE COM CONFLITO:
 git rebase - -continue
@@ -252,4 +252,14 @@ git log - -graph
 COMANDO PARA CRIAR ATALHO:
 git config --global alias.novocomando comando
 
+PEGAR APENAS UM COMMIT DE OUTRA BRANCH:
+git cherry-pick hashdocommit
 
+PEGAR UM COMMIT DE OUTRA BRANCH MAS SALVANDO APENAS NO INDEX:
+git cherry-pick -n hashdocommit
+
+PEGAR UM RANGE DE COMMITS ESPECIFICOS:
+git cherry-pick hashcommitInicial..hascommitFinal
+
+ACESSAR GIT COLA:
+git-cola
