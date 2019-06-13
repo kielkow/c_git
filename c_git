@@ -19,8 +19,25 @@ git commit -m “atualização”
 git pull origin master
 git push origin master 
 
+FAZER MERGE ENTRE BRANCHS:
+git checkout master: altera o local de trabalho para a branch master
+git pull: atualiza o histórico da branch master
+git checkout dev: altera o local de trabalho para a branch dev
+git rebase master: atualiza o HEAD da branch dev para receber as alterações da branch master
+git checkout master: altera o local de trabalho novamente para a branch master
+git merge dev: mescla as alterações da branch dev na master
+git push: envia suas alterações para o repositório remoto
+
+ATALHO PARA MERGE ENTRE BRANCHS:
+[alias]
+        publica = !git checkout master && git pull && git checkout dev && git rebase master && git checkout master && git merge dev && git push
+
+DEIXAR BRANCH COLORIDA:
+[color]
+    branch = auto
+
 FORÇAR PUSH:
-git push origin master - - force
+git push origin master - -force
 
 CLONAR REPOSITÓRIO:
 git clone url
@@ -32,7 +49,8 @@ ALTERA VERSÃO ATUAL POR OUTRA PASSADA:
 git checkout versão
 
 VER DIFERENÇA ENTRE DUAS VERSÕES:
-git diff v0.1 v0.2 
+git diff v0.1 v0.2
+git diff nomedabranch/nomedabranch 
 
 VER ARQUIVOS CONTROLADOS:
 git ls-files
@@ -189,4 +207,49 @@ git reset HEAD~numerodevoltas
 
 DESCARTAR ALTERAÇÕES PERMANENTEMENTE DE COMMIT ANTERIOR:
 git reset - -hard HEAD~numerodevoltas
+
+ABRIR ARQUIVO DE CONFIG. DO GIT:
+vim ~/.gitconfig
+
+CRIAR ATALHOS NO GIT:
+Adicionar no gitconfig [alias]
+
+ADICIONAR COMANDOS NO GITCONFIG:
+novonome = nomedocomando
+novonome = !git nomedocomando && git nomedocomando
+
+VER UM COMMIT POR LINHA: 
+git log - -pretty=online
+
+MOSTRAR MENOS DADOS DO COMMIT:
+git log - -pretty=short
+
+MOSTRAR MAIS DADOS DO COMMIT:
+git log - -pretty=full 
+
+GERAR MENSAGEM DE COMMIT:
+git log - -pretty=‘%a realizou o commit %h : %s’
+
+%a —> Autor do commit
+%h —> Hash do commit 
+%s —> Título do commit 
+
+VER QUAIS ARQUIVOS FORAM ALTERADOS:
+git log -p
+
+VER QUAIS ARQUIVOS FORAM ALTERADOS DE MANEIRA RESUMIDA:
+git log - -stat
+
+TRAZER ALTERAÇÕES DE UM REPO. REMOTO:
+git fetch nomedabranch 
+
+FAZER MERGE ENTRE BRANCHS REMOTAS:
+git merge nomedabranch/nomedabranch 
+
+VER CAMINHOS DO REPO:
+git log - -graph 
+
+COMANDO PARA CRIAR ATALHO:
+git config --global alias.novocomando comando
+
 
