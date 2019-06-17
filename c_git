@@ -28,6 +28,10 @@ git checkout master: altera o local de trabalho novamente para a branch master
 git merge dev: mescla as alterações da branch dev na master
 git push: envia suas alterações para o repositório remoto
 
+PUSH NÃO FUNCIONA:
+git pull origin master --allow-unrelated-histories
+git push origin master
+
 ATALHO PARA MERGE ENTRE BRANCHS:
 [alias]
         publica = !git checkout master && git pull && git checkout dev && git rebase master && git checkout master && git merge dev && git push
