@@ -28,6 +28,15 @@ git checkout master: altera o local de trabalho novamente para a branch master
 git merge dev: mescla as alterações da branch dev na master
 git push: envia suas alterações para o repositório remoto
 
+COMMITS ENTRE DOIS PCS:
+criar repositorio normal na primeria máquina (master1)
+clonar repositorio para segunda (master1)
+criar segunda branch na outra maquina (master2)
+faço as alteraçoes que quero na segunda branch (master2)
+dou um commit na segunda branch (master2)
+dou git pull ou git push com origin master2
+se quiser pode fazer merge entre master1 e master2
+
 PUSH NÃO FUNCIONA:
 git pull origin master --allow-unrelated-histories
 git push origin master
