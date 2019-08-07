@@ -37,6 +37,10 @@ dou um commit na segunda branch (master2)
 dou git pull ou git push com origin master2
 se quiser pode fazer merge entre master1 e master2
 
+VOLTAR PARA COMMIT ESPECIFICO E DAR PUSH NA BRANCH APARTIR DAQUELE COMMIT:
+git reset --hard numerodocommit
+git push origin +nomedabranch
+
 PUSH NÃO FUNCIONA:
 git pull origin master --allow-unrelated-histories
 git push origin master
