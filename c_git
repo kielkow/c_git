@@ -280,3 +280,21 @@ git cherry-pick hashcommitInicial..hascommitFinal
 
 ACESSAR GIT COLA:
 git-cola
+
+EDITAR CONFIG GLOBAL:
+git config --global --edit
+
+EDITAR CONFIG GLOBAL NO VSCODE:
+git config --global core.editor code
+git config --global --edit
+
+MEUS ALIAS:
+[user]
+	email = matheuskiel@fiorifer.com.br
+	name = kielkow
+[core]
+	editor = code --wait
+[alias]
+	s = !git status -s
+	c = !git add --all && git commit -m
+	l = !git log --pretty=format:'%C(blue)%h%C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
