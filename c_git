@@ -302,3 +302,10 @@ MEUS ALIAS:
 JUNTAR ULTIMO COMMIT COM ATUAL:
 git add .
 git commit --amend --no-edit
+
+IGNORAR FILE COM ERRO (exemplo):
+git add .
+git stash push src/infra/db/mongodb/account-repository
+
+REMOVER FILE DA LISTA DE STASH PARA COMO ESTAVA ANTES:
+git stash pop
