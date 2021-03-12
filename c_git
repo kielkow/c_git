@@ -321,3 +321,6 @@ git tag
 
 ENVIAR TODAS AS TAGS PARA O REPO:
 git push origin master --tags
+
+ENVIAR APENAS TAGS DO TIPO ANNOTATED:
+git push origin master --follow-tags
