@@ -318,3 +318,6 @@ git tag -a "1.0.0" -m "1.0.0"
 
 MOSTRAR TAG DO REPO:
 git tag
+
+ENVIAR TODAS AS TAGS PARA O REPO:
+git push origin master --tags
