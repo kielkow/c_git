@@ -315,3 +315,6 @@ git rm -r --cached .
 
 ADICIONAR UMA TAG:
 git tag -a "1.0.0" -m "1.0.0"
+
+MOSTRAR TAG DO REPO:
+git tag
