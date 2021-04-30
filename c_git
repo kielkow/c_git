@@ -336,3 +336,6 @@ git push origin --delete <old_name>
 DELETAR COMMITS:
 git reset {hash-do-commit-desejado} --hard
 git push origin master --force
+
+REMOVER ARQUIVOS COMO UNTRACKED DO STASH:
+git clean -df
