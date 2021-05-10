@@ -118,6 +118,7 @@ git branch -a
 
 REMOVER UMA BRANCH:
 git branch -D
+git branch -D refactor/paths
 
 REMOVER BRANCH SINCRONIZADA:
 git branch -d
