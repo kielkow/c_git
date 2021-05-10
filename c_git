@@ -339,3 +339,6 @@ git push origin master --force
 
 REMOVER ARQUIVOS COMO UNTRACKED DO STASH:
 git clean -df
+
+DELETAR TAG:
+-> git tag -d "2.0.0"
