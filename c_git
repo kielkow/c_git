@@ -346,3 +346,6 @@ git tag -d "2.0.0"
 
 DELETAR ARQUIVO GIT:
 rm -fr .git
+
+PERMITIR QUE O GIT FAÇA O MERGE DE DOIS PROJETOS COM HISTÓRICOS DIFERENTES
+git pull origin master --allow-unrelated-histories
