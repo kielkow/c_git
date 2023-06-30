@@ -1,6 +1,5 @@
 Comandos git básicos
 
-
 SUBIR PRO GITHUB
 git init 
 git status 
@@ -349,3 +348,6 @@ rm -fr .git
 
 PERMITIR QUE O GIT FAÇA O MERGE DE DOIS PROJETOS COM HISTÓRICOS DIFERENTES
 git pull origin master --allow-unrelated-histories
+
+COMANDO PARA GERAR BRANCH À PARTIR DE UM DETERMINADO COMMIT:
+git branch <branch_name> <commit_id>
