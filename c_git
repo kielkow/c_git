@@ -351,3 +351,8 @@ git pull origin master --allow-unrelated-histories
 
 COMANDO PARA GERAR BRANCH À PARTIR DE UM DETERMINADO COMMIT:
 git branch <branch_name> <commit_id>
+
+GIT CREDENTIALS
+git config --list –-show-origin
+git config --global user.email "email@geeks.ai"
+git config --global user.name "GeeksforGeeks"
