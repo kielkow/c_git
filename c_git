@@ -346,13 +346,16 @@ git tag -d "2.0.0"
 DELETAR ARQUIVO GIT:
 rm -fr .git
 
-PERMITIR QUE O GIT FAÇA O MERGE DE DOIS PROJETOS COM HISTÓRICOS DIFERENTES
+PERMITIR QUE O GIT FAÇA O MERGE DE DOIS PROJETOS COM HISTÓRICOS DIFERENTES:
 git pull origin master --allow-unrelated-histories
 
 COMANDO PARA GERAR BRANCH À PARTIR DE UM DETERMINADO COMMIT:
 git branch <branch_name> <commit_id>
 
-GIT CREDENTIALS
+GIT CREDENTIALS:
 git config --list --show-origin
 git config --global user.email "email@geeks.ai"
 git config --global user.name "GeeksforGeeks"
+
+PUSH COMMIT SEM REMOTE BRANCH NO GITLAB:
+git push https://gitlab-ci-token:<TOKEN>@gitlab.com/user/myrepo <BRANCH>
