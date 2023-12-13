@@ -359,3 +359,91 @@ git config --global user.name "GeeksforGeeks"
 
 PUSH COMMIT SEM REMOTE BRANCH NO GITLAB:
 git push https://gitlab-ci-token:<TOKEN>@gitlab.com/user/myrepo <BRANCH>
+
+# ######################## #
+#  GIT / GIT FLOW Sripts   #
+# ######################## #
+
+alias gtp="git push"
+
+# git stash
+alias gsh="git stash"
+alias gsha="git stash apply"
+alias gshl="git stash list"
+alias gshc="git stash clear"
+
+# Git fetch
+alias gfo="git fetch origin"
+alias gfop="git fetch origin -p"
+
+# Git Tag
+alias gft="git fetch --tags"
+alias gpt="git push --tags"
+
+# Git Master Branch
+alias gcm="git checkout master"
+alias gpm="git pull origin master"
+alias gmm="git merge master"
+
+# Git Main Branch
+alias gcmain="git checkout main"
+alias gpmain="git pull origin main"
+alias gmmain="git merge main"
+
+# Git Develop Branch
+alias gcd="git checkout develop"
+alias gpd="git pull origin develop"
+alias gmd="git merge develop"
+
+
+# GIT Flow feature
+gckf() { git checkout feature/$1; }
+gffs() { git flow feature start $1; }
+gffp() { git flow feature publish $(git_flow_current_branch); }
+gfff() { git pull origin develop; git flow feature finish $(git_flow_current_branch); }
+
+# GIT bugfix
+gckb() { git checkout bugfix/$1; }
+gfbs() { git flow bugfix start $1; }
+gfbp() { git flow bugfix publish $(git_flow_current_branch); }
+gfbf() { git pull origin develop; git flow bugfix finish $(git_flow_current_branch); }
+
+# GIT hotfix
+gch() { git checkout hotfix/$1; }
+gfhs() { git flow hotfix start $1; }
+gfhfp() { git flow hotfix publish $(git_flow_current_branch); }
+gfhf() { git pull origin develop; git flow hotfix finish $(git_flow_current_branch); }
+# gfhf() { git fetch --tags; git pull origin master; git flow hotfix finish -F $(git_flow_current_branch); }
+
+# GIT release - I dont like to use it, prefere npm version :D 
+# gcr()  { git checkout release/$1;  }
+# gfrs() { git flow release start $1; }
+# gfrf() { git flow release finish; }
+
+# GIT current branch
+git_flow_current_branch(){ git rev-parse --abbrev-ref HEAD | cut -d'/' -f 2; }
+
+# Git Last Tag - Show last tag generated
+gltag() {
+  LAST_TAG=$(git for-each-ref --format="%(refname:short)" --sort=taggerdate refs/tags | tail -1 | git for-each-ref --format="%(refname:short)" --sort=taggerdate refs/tags | tail -1);
+#   echo $LAST_TAG | xargs echo -n | pbcopy;
+  echo "LAST TAG: "$LAST_TAG;
+}
+
+# gcbranchs() {
+  # git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
+# }
+
+# Update local repo with remote 
+# - update master
+# - update develop
+# - fetch branchs
+# - fetch tags
+# - remove branchs deleteds in remote
+updaterepo() {
+  gcm; gpm; gcmain; gpmain; gcd; gpd; gft; git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
+}
+
+#*******************#
+# End Git Script    #
+#*******************#
