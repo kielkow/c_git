@@ -447,3 +447,8 @@ updaterepo() {
 #*******************#
 # End Git Script    #
 #*******************#
+
+CMD function to kill process at port:
+killport() {
+  kill -9 $(lsof -ti:$1)
+}
