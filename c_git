@@ -448,7 +448,23 @@ updaterepo() {
 # End Git Script    #
 #*******************#
 
-CMD function to kill process at port:
+CMD FUNCTION PARA MATAR PROCESSO EM DETERMINADA PORTA:
 killport() {
   kill -9 $(lsof -ti:$1)
 }
+
+CONFIG PARA TER DUAS CONTAS GIT DIFERENTES NA MESMA MÁQUINA:
+[user]
+    name = mk
+    email = mk@gmail.com
+
+[includeIf "gitdir:~/www/semantix/"]
+    path = ~/www/semantix/.gitconfig
+[push]
+    autoSetupRemote = true
+
+[user]
+    name = mk
+    email = mk@semantix.ai
+[push]
+    autoSetupRemote = true
