@@ -468,3 +468,11 @@ CONFIG PARA TER DUAS CONTAS GIT DIFERENTES NA MESMA MÁQUINA:
     email = mk@semantix.ai
 [push]
     autoSetupRemote = true
+
+GIT STASH - Quando quero salvar alterações que fiz temporariamente, mas não quero commita-las ainda. 
+Por exemplo, dar um pull nas alterações atuais da branch que estou trabalhando, e depois adicionar 
+minhas alterações para resolver os conflitos e realizar o merge:
+git add .
+git stash save "working in progress"
+git pull origin branch_name
+git stash pop # or 'git stash apply' if you want save on stash list
