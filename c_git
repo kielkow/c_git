@@ -476,3 +476,6 @@ git add .
 git stash save "working in progress"
 git pull origin branch_name
 git stash pop # or 'git stash apply' if you want save on stash list
+
+EXCLUIR NODE_MODULES DO CACHE:
+git rm -r --cached node_modules
